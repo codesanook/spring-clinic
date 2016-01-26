@@ -13,12 +13,12 @@ import java.util.List;
 @RequestMapping("/api/patients")
 @Transactional(readOnly = false, rollbackFor = Exception.class,
         isolation = Isolation.READ_COMMITTED)
-public class PatientController {
+public class PatientApiController {
 
     private PatientRepository patientRepository;
 
     @Autowired
-    public PatientController(PatientRepository patientRepository) {
+    public PatientApiController(PatientRepository patientRepository) {
         this.patientRepository = patientRepository;
     }
 
